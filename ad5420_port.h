@@ -26,7 +26,6 @@
 #define AD5420_PORT_H_
 
 #include <avr/io.h>
-#include <util/delay.h>
 
 /*! \brief Pin of the CLEAR signal.*/
 #define AD5420_CLEAR_BIT  PB4
