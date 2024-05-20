@@ -91,7 +91,6 @@ Returns DAC CONTROL, STATUS or DATA register value.
 
 #include "Arduino.h"
 #include <avr/io.h>
-#include <util/delay.h>
 #include <SPI.h>
 
 
