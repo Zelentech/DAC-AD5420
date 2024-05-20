@@ -139,7 +139,7 @@ Returns DAC CONTROL, STATUS or DATA register value.
 
 /*! \brief Shorthand macro for a 10 us delay required by write to control
 register of DAC.*/
-#define AD5420_LATCH_CONTROL_WRITE_DELAY   _delay_us(10)
+#define AD5420_LATCH_CONTROL_WRITE_DELAY   delayMicroseconds(10)
 
 /*! \brief Shorthand macro for setting CLEAR pin HIGH.*/
 #define AD5420_CLEAR_HIGH  AD5420_CLEAR_OUT |= (1 << AD5420_CLEAR_BIT)
