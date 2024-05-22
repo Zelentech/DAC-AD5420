@@ -80,24 +80,24 @@
 #ifndef AD5420_H_
 #define AD5420_H_
 
-#include "Arduino.h"
+#include <Arduino.h>
 #include <avr/io.h>
 #include <SPI.h>
 
 /**
  * \brief Pin of the CLEAR signal
  */
-#define AD5420_CLEAR_BIT  PA15
+#define AD5420_CLEAR_BIT  PIN_PCC_D5
 
 /**
  * \brief Pin of the LATCH signal
  */
-#define AD5420_LATCH_BIT  PA07
+#define AD5420_LATCH_BIT  A6
 
 /**
  * \brief Pin of the FAULT signal
  */
-#define AD5420_FAULT_BIT  PB0
+#define AD5420_FAULT_BIT  PIN_PCC_D7
 
 /**
  * \brief Input register name of the CLEAR signal
@@ -114,20 +114,20 @@
  */
 #define AD5420_FAULT_IN   PINB
 
-/**
- * \brief Direction register name of the CLEAR signal
- */
-#define AD5420_CLEAR_DIR  DDRB
-
-/**
- * \brief Direction register name of the LATCH signal
- */
-#define AD5420_LATCH_DIR  DDRB
-
-/**
- * \brief Direction register name of the FAULT signal
- */
-#define AD5420_FAULT_DIR  DDRB
+///**
+// * \brief Direction register name of the CLEAR signal
+// */
+//#define AD5420_CLEAR_DIR  DDRB
+//
+///**
+// * \brief Direction register name of the LATCH signal
+// */
+//#define AD5420_LATCH_DIR  DDRB
+//
+///**
+// * \brief Direction register name of the FAULT signal
+// */
+//#define AD5420_FAULT_DIR  DDRB
 
 /**
  * \brief Output register name of the CLEAR signal
@@ -493,7 +493,7 @@ class DAC_AD5420 {
 
     private:
 
-        volatile  uint8_t *csport, *latchport, *clearport, *faultport;
+        volatile  uint32_t *csport, *latchport, *clearport, *faultport;
 };
 
 
