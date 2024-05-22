@@ -6,7 +6,7 @@
 DAC_AD5420::DAC_AD5420(const uint8_t latchPin_, const uint8_t clearPin_, const uint8_t faultPin_) 
 {
 
-    Serial.println("DAC_AD5420");
+    //Serial.println("DAC_AD5420");
 
     _latch = latchPin_;
     _clear = clearPin_;
@@ -17,7 +17,7 @@ DAC_AD5420::DAC_AD5420(const uint8_t latchPin_, const uint8_t clearPin_, const u
 // Constructor
 void DAC_AD5420::begin()
 {
-    Serial.println("begin()");
+    //Serial.println("begin()");
 
     // UNO, MEGA, Yun, nano, duemilanove and other 8-bit Arduinos
     SPI.begin();
@@ -124,7 +124,7 @@ void  DAC_AD5420::ad5420_clear()
 
 void  DAC_AD5420::ad5420_reset()
 {
-    Serial.println("ad5420_reset()");
+    //Serial.println("ad5420_reset()");
 
     ad5420_write((AD5420_RESET_REG_ADDR << 16) + 1);
 
